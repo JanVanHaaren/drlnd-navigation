@@ -10,7 +10,7 @@ from unityagents import UnityEnvironment
 from agent_dqn import Agent
 
 
-def run_dqn(environment, agent, weights, n_episodes=2000, max_t=1000, eps_start=1.0, eps_end=0.01, eps_decay=0.995):
+def run_dqn(environment, agent, weights, n_episodes=2000, max_t=1000, eps_start=0.5, eps_end=0.01, eps_decay=0.995):
     """Run Deep Q-Learning for the given agent in the given environment.
     
     Params
@@ -57,7 +57,7 @@ def run_dqn(environment, agent, weights, n_episodes=2000, max_t=1000, eps_start=
         if i_episode % 100 == 0:
             print('\rEpisode {}\tAverage score: {:.2f}'.format(i_episode, np.mean(scores_window)))
 
-        if np.mean(scores_window) >= 18.0:
+        if np.mean(scores_window) >= 17.0:
             print('\nEnvironment solved in {:d} episodes!\tAverage score: {:.2f}'.format(i_episode - 100, np.mean(scores_window)))
             torch.save(agent.qnetwork_local.state_dict(), weights)
             break
