@@ -4,7 +4,7 @@ This report presents the approach taken to solve the first project of Udacity's 
 
 ## Solution
 
-The agent performs Deep Q-Learning in the environment. Addressing the problem as an episodical task, the agent trains for `n_episodes` or until it solves the environment. The environment is solved when the agent receives an average reward of +13 over the last 100 episodes.
+The agent performs Deep Q-Learning in the environment. Addressing the problem as an episodic task, the agent trains for `n_episodes` or until it solves the environment. The environment is solved when the agent receives an average reward of +13 over the last 100 episodes.
 
 ### Q-Learning hyperparameters
 
